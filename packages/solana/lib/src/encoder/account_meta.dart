@@ -76,7 +76,7 @@ class AccountMeta implements Comparable<AccountMeta> {
     if (isWriteable && !other.isWriteable) return -1;
     if (!isWriteable && other.isWriteable) return 1;
 
-    return 0;
+    return toString().toLowerCase().compareTo(other.toString().toLowerCase());
   }
 
   @override
